@@ -2,4 +2,111 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: "IBM Plex mono", sans-serif;
+  max-inline-size: 375px;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  background-image: url("/images/cover-image-dark.png");
+  position: relative;
+}
+
+.header__theme-menu-list::before {
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decoration-text::after {
+  content: "REC";
+  color: var(--accent-color);
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 37px;
+}
+.decoration-image::after {
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  position: absolute;
+  box-shadow: var(--accent-color) 0px 0px 10px 5px;
+  inset-block-start: 18px;
+  inset-inline-end: 19px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+  color: var(--accent-color);
+  padding-inline-end: 9px;
+  padding-block-start: 10px;
+}
+
+.header__theme-menu-item {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1em;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none;
+  text-transform: lowercase;
+  padding-inline-start: 13px;
+  padding-inline-end: 13px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.main-title {
+  color: var(--main-header-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header-description {
+  margin: 0px 10px 66px 10px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  font-weight: bold;
+}
+
+.header-description::after {
+  content: " ";
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
