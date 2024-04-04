@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: "IBM Plex mono", sans-serif;
-  max-inline-size: 375px;
+  inline-size: 375px;
 }
 
 .header {
@@ -19,14 +19,17 @@
   block-size: 25px;
   border-block-start: 1px solid var(--accent-color);
   border-inline-end: 1px solid var(--accent-color);
+  align-self: end;
+  margin-block-end: 27px;
 }
 
-.decoration-text::after {
+.decoration-text::before {
   content: "REC";
   color: var(--accent-color);
   position: absolute;
   inset-block-start: 10px;
-  inset-inline-end: 37px;
+  inset-inline-end: 38px;
+  line-height: 25px;
 }
 .decoration-image::after {
   content: "";
@@ -40,33 +43,32 @@
   inset-inline-end: 19px;
 }
 
+.header__theme-menu {
+  justify-self: end;
+}
 .header__theme-menu-list {
-  display: grid;
-  justify-items: end;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   color: var(--accent-color);
-  padding-inline-end: 9px;
+  padding-inline-end: 10px;
   padding-block-start: 10px;
 }
 
 .header__theme-menu-item {
-  text-align: center;
   font-size: 18px;
-  line-height: 1em;
 }
 
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
-  margin: 0;
-  padding: 0;
-  text-align: inherit;
   font: inherit;
   border-radius: 0;
   appearance: none;
   text-transform: lowercase;
-  padding-inline-start: 13px;
-  padding-inline-end: 13px;
+  padding: 4px 13px;
+  cursor: pointer;
+  line-height: 18px;
 }
 
 .header__theme-menu-button:hover {
@@ -88,11 +90,17 @@
 .main-title {
   color: var(--main-header-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-color);
+  padding-block-start: 65px;
+  padding-block-end: 52px;
+  padding-inline-start: 10px;
 }
 
 .header-description {
   margin: 0px 10px 66px 10px;
+  font-size: 18px;
+  line-height: 23.4px;
 }
 
 .title-decor {
