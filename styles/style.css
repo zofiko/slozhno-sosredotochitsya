@@ -4,6 +4,12 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: "IBM Plex mono", sans-serif;
   inline-size: 375px;
+  background-image: url("/images/cover-image-dark.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: grid;
+  gap: 40px;
 }
 
 .header {
@@ -117,4 +123,112 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+}
+
+.main-content {
+  background-color: var(--header-color);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-section__header {
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--accent-color);
+}
+
+.content-section__subheader {
+  font-size: 18px;
+  line-height: 23.4px;
+  color-interpolation-filters: var(--header-color);
+}
+
+.content-section__paragraph {
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--main-color);
+  margin-block-start: -10px;
+}
+
+.link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  border-block-end: 1px solid var(--main-color);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--main-color);
+}
+
+.content-section__tip {
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--header-color);
+  font-weight: normal;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.images {
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  row-gap: 10px;
+}
+
+.image {
+  inline-size: 100%;
+  object-fit: contain;
+}
+.footer {
+  position: relative;
+}
+.footer-content {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  padding: 286px 14px;
+}
+
+.footer::after {
+  position: absolute;
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
+}
+
+.footer::before {
+  position: absolute;
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
 }
