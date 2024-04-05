@@ -101,6 +101,8 @@
   padding-block-start: 65px;
   padding-block-end: 52px;
   padding-inline-start: 10px;
+  letter-spacing: 0;
+  font-family: inherit;
 }
 
 .header-description {
@@ -209,6 +211,7 @@
 .footer-content {
   text-shadow: 2px 2px 0 var(--accent-color);
   padding: 286px 14px;
+
 }
 
 .footer::after {
