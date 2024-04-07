@@ -17,7 +17,6 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  block-size: 100%;
 }
 
 .header::before {
@@ -26,7 +25,7 @@
   block-size: 25px;
   border-block-start: 1px solid var(--accent-color);
   border-inline-end: 1px solid var(--accent-color);
-  inset-block-start: 10px;
+  inset-block-start: 8px;
   inset-inline-end: 10px;
   position: absolute;
 }
@@ -38,7 +37,7 @@
   border-block-end: 1px solid var(--accent-color);
   border-inline-start: 1px solid var(--accent-color);
   position: absolute;
-  inset-block-end: 10px;
+  inset-block-end: 8px;
   inset-inline-start: 10px;
 }
 
@@ -63,7 +62,7 @@
 }
 
 .header__theme-menu {
-  padding-block-start: 75px;
+  padding-block-start: 72px;
   padding-inline-end: 10px;
   justify-self: end;
 }
@@ -112,7 +111,7 @@
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-color);
   padding-block-start: 65px;
-  padding-block-end: 52px;
+  padding-block-end: 55px;
   padding-inline-start: 10px;
   font-family: inherit;
 }
@@ -177,10 +176,6 @@
 
 .link:hover {
   border-block-end: 1px solid var(--main-color);
-}
-
-.header__theme-menu-button_active {
-  pointer-events: none;
 }
 
 .link:focus {
@@ -253,6 +248,9 @@
   .main-content {
     padding-block-start: 60px;
     padding-block-end: 60px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    gap: 80px;
   }
   .header::before {
     inset-block-start: 20px;
@@ -279,11 +277,6 @@
   .main-title {
     padding: 0px;
     padding-block-start: 173px;
-  }
-  .main-content {
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
-    gap: 80px;
   }
 
   .header-description {
@@ -522,6 +515,41 @@
     --header-color: #353430;
     --background-color: white;
     --main-header-color: #ffc2e6;
+
+    .content-section__header {
+      color: var(--header-color);
+    }
+
+    .header__theme-menu-list {
+      color: var(--header-color);
+    }
+
+    .header::before {
+      border-block-end: 1px solid var(--header-color);
+      border-inline-start: 1px solid var(--header-color);
+    }
+
+    .header:after {
+      border-block-start: 1px solid var(--header-color);
+      border-inline-end: 1px solid var(--header-color);
+    }
+
+    .decoration-text::before {
+      visibility: hidden;
+    }
+    .decoration-image::after {
+      visibility: hidden;
+    }
+
+    .footer::before {
+      border-block-end: 1px solid var(--header-color);
+      border-inline-start: 1px solid var(--header-color);
+    }
+
+    .footer:after {
+      border-block-start: 1px solid var(--header-color);
+      border-inline-end: 1px solid var(--header-color);
+    }
   }
 }
 
@@ -542,12 +570,23 @@
     --header-color: #353430;
     --background-color: white;
     --main-header-color: #ffc2e6;
-    .header::before {
-      visibility: hidden;
+
+    .content-section__header {
+      color: var(--header-color);
     }
 
-    .header:after {
-      visibility: hidden;
+    .header__theme-menu-list {
+      color: var(--header-color);
+    }
+
+    .header::after {
+      border-block-end: 1px solid var(--header-color);
+      border-inline-start: 1px solid var(--header-color);
+    }
+
+    .header::before {
+      border-block-start: 1px solid var(--header-color);
+      border-inline-end: 1px solid var(--header-color);
     }
 
     .decoration-text::before {
@@ -558,11 +597,32 @@
     }
 
     .footer::before {
-      visibility: hidden;
+      border-block-end: 1px solid var(--header-color);
+      border-inline-start: 1px solid var(--header-color);
     }
 
     .footer:after {
-      visibility: hidden;
+      border-block-start: 1px solid var(--header-color);
+      border-inline-end: 1px solid var(--header-color);
+    }
+    .header__theme-menu-button:hover {
+      outline: 1px solid rgba(50, 49, 45, 1);
+    }
+    
+    .header__theme-menu-button:focus-visible {
+      border-block-end: 1px solid var(--header-color);
+    }
+
+    .link {
+      text-shadow: 2px 2px 0 #FF8DCB;
+    }
+    
+    .link:hover {
+      border-block-end: 1px solid var(--header-color);
+    }
+    
+
+    .link:focus-visible {
+      outline: 1px solid var(--header-color);
     }
   }
-}
