@@ -17,6 +17,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  block-size: 100vh;
 }
 
 .header::before {
@@ -608,21 +609,21 @@
     .header__theme-menu-button:hover {
       outline: 1px solid rgba(50, 49, 45, 1);
     }
-    
+
     .header__theme-menu-button:focus-visible {
       border-block-end: 1px solid var(--header-color);
     }
 
     .link {
-      text-shadow: 2px 2px 0 #FF8DCB;
+      text-shadow: 2px 2px 0 #ff8dcb;
     }
-    
+
     .link:hover {
       border-block-end: 1px solid var(--header-color);
     }
-    
 
     .link:focus-visible {
       outline: 1px solid var(--header-color);
     }
   }
+}
