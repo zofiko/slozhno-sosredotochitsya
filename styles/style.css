@@ -17,6 +17,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  block-size: 100%;
 }
 
 .header::before {
@@ -532,7 +533,6 @@
     --background-color: #000028;
     --main-header-color: #db00ff;
     --background-image: var(--background-image);
-  
   }
 
   .page.theme_light {
@@ -560,8 +560,9 @@
     .footer::before {
       visibility: hidden;
     }
-  
+
     .footer:after {
       visibility: hidden;
     }
   }
+}
