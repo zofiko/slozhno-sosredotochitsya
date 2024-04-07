@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
-    <link rel="icon" href="./images/favicon.ico" sizes="any" />
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/dark.css" />
-    <link rel="stylesheet" href="./styles/light.css" />
-    <title>Сложно сосредоточиться</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" href="./images/favicon.ico" sizes="any" />
+  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
+  <link rel="stylesheet" href="./styles/globals.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/dark.css" />
+  <link rel="stylesheet" href="./styles/light.css" />
+  <title>Сложно сосредоточиться</title>
+</head>
 
-  <body class="page">
-    <header class="header decorated-zone">
-      <div class="decoration-text"></div>
-      <div class="decoration-image"></div>
-      <nav class="header__theme-menu">
-        <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              Неон
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <h1 class="main-title">no focus</h1>
-      <p class="header-description title-decor">
-        Что делать, когда не можешь делать ничего<br />Или почему нам так сложно
-        сконцентрироваться, особенно когда очень надо
-      </p>
-    </header>
-    <main class="main-content">
-      <article class="content-section">
-        <h2 class="content-section__header">
-          Почему сосредоточиться так сложно
-        </h2>
+<body class="page theme_light">
+  <header class="header decorated-zone">
+    <div class="decoration-text" aria-hidden="true"></div>
+    <div class="decoration-image" aria-hidden="true"></div>
+    <nav class="header__theme-menu">
+      <ul class="header__theme-menu-list">
+        <li class="header__theme-menu-item">
+          <button class="header__theme-menu-button header__theme-menu-button_type_light">
+            День
+          </button>
+        </li>
+        <li class="header__theme-menu-item">
+          <button class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+            disabled>
+            Авто
+          </button>
+        </li>
+        <li class="header__theme-menu-item">
+          <button class="header__theme-menu-button header__theme-menu-button_type_dark">
+            Неон
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="main-title">no focus</h1>
+    <p class="header-description title-decor">
+      Что делать, когда не можешь делать ничего<br />Или почему нам так сложно
+      сконцентрироваться, особенно когда очень надо
+    </p>
+  </header>
+  <main class="main-content">
+    <article class="content-section grid-wrapper">
+      <h2 class="content-section__header">
+        Почему сосредоточиться так сложно
+      </h2>
+      <span class="flex-wrapper">
         <h3 class="content-section__subheader title-decor">Многозадачность</h3>
         <p class="content-section__paragraph">
           Особенно сложно сосредоточиться, когда задач много и все они — важные.
@@ -81,46 +76,57 @@
           замкнутый круг: чем больше отвлекаешься, тем больше удовольствия
           получаешь.
         </p>
-      </article>
-      <article class="content-section">
-        <h2 class="content-section__header">
-          Что снижает концентрацию внимания?
-        </h2>
-        <h3 class="content-section__subheader title-decor">Многозадачность</h3>
-        <p class="content-section__paragraph">
-          Как концентрация может снижаться из-за… концентрации? Любая стрессовая
-          ситуация (и резко меняющийся мир в целом) заставляет наш мозг
-          постоянно «сканировать» окружающую среду на предмет опасности.
-          Например, читать новости вместо работы. Но быть собранными всё время —
-          невозможно. Концентрация — мышца, и она может не выдержать, если не
-          давать ей отдохнуть.
-        </p>
-        <h3 class="content-section__subheader title-decor">Еда</h3>
-        <p class="content-section__paragraph">
-          «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
-          доставляют в мозг энергию и помогают ему лучше работать. Но уходит эта
-          энергия также быстро, как и приходит. А мы в результате попадаем на
-          «углеводные качели»: как только действие «быстрых углеводов»
-          заканчивается, мы чувствуем усталость и сонливость. И хотим ещё больше
-          быстрых углеводов.
-        </p>
-        <h3 class="content-section__subheader title-decor">Гаджеты</h3>
-        <p class="content-section__paragraph">
-          Да-да, это та самая ситуация, когда на экране ноутбука — код, в
-          наушниках — подкаст, а на компьютере фоном — ещё и видео с забавными
-          утятами. В результате мозг пытается переключиться с одной задачи на
-          другую — и просто не может. А чтобы вернуться к состоянию полной
-          концентрации, человеку в среднем нужно 20 минут. Вот и получается, что
-          чем больше времени мы проводим в гаджетах, тем больше времени затем
-          нужно, чтобы вернуться к работе.
-        </p>
-      </article>
-      <article class="content-section">
-        <h2 class="content-section__header">
-          Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
-          секунд)
-        </h2>
-        <h3 class="content-section__subheader title-decor">
+      </span>
+    </article>
+    <article class="content-section">
+      <h2 class="content-section__header different-align">
+        Что снижает концентрацию внимания?
+      </h2>
+      <div class="flex-wrapper__big-screen">
+        <div class="column">
+          <h3 class="content-section__subheader different-margin title-decor">Многозадачность</h3>
+          <p class="content-section__paragraph">
+            Как концентрация может снижаться из-за… концентрации? Любая стрессовая
+            ситуация (и резко меняющийся мир в целом) заставляет наш мозг
+            постоянно «сканировать» окружающую среду на предмет опасности.
+            Например, читать новости вместо работы. Но быть собранными всё время —
+            невозможно. Концентрация — мышца, и она может не выдержать, если не
+            давать ей отдохнуть.
+          </p>
+        </div>
+        <div class="column">
+          <h3 class="content-section__subheader different-margin  title-decor">Еда</h3>
+          <p class="content-section__paragraph">
+            «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
+            доставляют в мозг энергию и помогают ему лучше работать. Но уходит эта
+            энергия также быстро, как и приходит. А мы в результате попадаем на
+            «углеводные качели»: как только действие «быстрых углеводов»
+            заканчивается, мы чувствуем усталость и сонливость. И хотим ещё больше
+            быстрых углеводов.
+          </p>
+        </div>
+        <div class="column">
+          <h3 class="content-section__subheader different-margin  title-decor">Гаджеты</h3>
+          <p class="content-section__paragraph">
+            Да-да, это та самая ситуация, когда на экране ноутбука — код, в
+            наушниках — подкаст, а на компьютере фоном — ещё и видео с забавными
+            утятами. В результате мозг пытается переключиться с одной задачи на
+            другую — и просто не может. А чтобы вернуться к состоянию полной
+            концентрации, человеку в среднем нужно 20 минут. Вот и получается, что
+            чем больше времени мы проводим в гаджетах, тем больше времени затем
+            нужно, чтобы вернуться к работе.
+          </p>
+        </div>
+
+      </div>
+    </article>
+    <article class="content-section grid-wrapper">
+      <h2 class="content-section__header">
+        Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
+        секунд)
+      </h2>
+      <div class="flex-wrapper">
+        <h3 class="content-section__subheader content-section__subheader-tips title-decor">
           5 простых (на самом деле не очень) советов
         </h3>
         <h4 class="content-section__tip title-decor">
@@ -167,36 +173,26 @@
           А вот интересная книга способна затянуть и на несколько часов и круто
           тренирует направленное внимание.
         </p>
-      </article>
-      <section class="gallery">
-        <h3 class="content-section__subheader title-decor">
-          А можно в картинках?
-        </h3>
-        <section class="images">
-          <img
-            class="image"
-            src="./images/sunset.png"
-            alt="Иллюстрация заходящего солнца на фоне гор и водоема"
-          /><img
-            class="image"
-            src="./images/ice-cream.png"
-            alt="Иллюстрация мороженого с топпингом, фруктами и вафлями"
-          /><img
-            class="image"
-            src="./images/tape.png"
-            alt="Иллюстрация аудио-кассеты"
-          /><img class="image"
-            src="./images/books.png"
-            alt="Иллюстрация стопки книг с чашкой какого-то напитка в кружке на блюдце, стоящей на верху стопки"
-          /><img
-            class="image"
-            src="./images/street.png"
-            alt="Иллюстрация улицы где-то в Азии"
-          />
-        </section>
+      </div>
+    </article>
+    <section class="gallery">
+      <h3 class="content-section__subheader title-decor">
+        А можно в картинках?
+      </h3>
+      <section class="images">
+        <img class="image image-one" src="./images/sunset.png"
+          alt="Иллюстрация заходящего солнца на фоне гор и водоема" /><img class="image image-two"
+          src="./images/ice-cream.png" alt="Иллюстрация мороженого с топпингом, фруктами и вафлями" /><img
+          class="image image-three" src="./images/tape.png" alt="Иллюстрация аудио-кассеты" /><img
+          class="image image-four" src="./images/books.png"
+          alt="Иллюстрация стопки книг с чашкой какого-то напитка в кружке на блюдце, стоящей на верху стопки" /><img
+          class="image image-five" src="./images/street.png" alt="Иллюстрация улицы где-то в Азии" />
       </section>
-    </main>
-    <script src="./scripts/script.js"></script>
-    <footer class="footer"><p class="footer-content main-title">focus</p></footer>
-  </body>
+    </section>
+  </main>
+  <script src="./scripts/script.js"></script>
+  <footer class="footer">
+    <p class="footer-content main-title">focus</p>
+  </footer>
+</body>
 </html>
