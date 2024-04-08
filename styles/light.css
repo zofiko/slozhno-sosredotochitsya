@@ -3,25 +3,27 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
-.page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+:root.theme-light {
+  --content-color: #353430;
+  --accent-color: #FF8DCB;
+  --background-color: #F5F5F5;
+  --main-header-color: #FFC2E6;
   --background-image: url("/images/cover-image-light.png");
-  --main-color: #353430;
-  --accent-color: #ff8dcb;
-  --header-color: #353430;
-  --background-color: white;
-  --main-header-color: #ffc2e6;
 }
 
-:root {
-  --background-image: url("/images/cover-image-light.png");
-  --main-color: #353430;
-  --accent-color: #ff8dcb;
-  --header-color: #353430;
-  --background-color: white;
-  --main-header-color: #ffc2e6;
-}
+
+  .decoration::before {
+    visibility: hidden;
+  }
+
+  .decoration::after{
+    visibility: hidden;
+  }
+
+
+
+
+
+
+
+  
