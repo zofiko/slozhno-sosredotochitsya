@@ -13,14 +13,6 @@
     --background-image: url("/images/cover-image-light.png");
   }
 
-  .decoration::before {
-    visibility: hidden;
-  }
-
-  .decoration::after {
-    visibility: hidden;
-  }
-
   .header::before {
     border-block-start: 1px solid var(--content-color);
     border-inline-end: 1px solid var(--content-color);
