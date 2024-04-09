@@ -3,27 +3,148 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-light {
-  --content-color: #353430;
-  --accent-color: #FF8DCB;
-  --background-color: #F5F5F5;
-  --main-header-color: #FFC2E6;
-  --background-image: url("/images/cover-image-light.png");
-}
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --content-color: #353430;
+    --accent-color: #ff8dcb;
+    --background-color: #f5f5f5;
+    --main-header-color: #ffc2e6;
+    --background-image: url("/images/cover-image-light.png");
+  }
 
   .decoration::before {
     visibility: hidden;
   }
 
-  .decoration::after{
+  .decoration::after {
     visibility: hidden;
   }
 
+  .header::before {
+    border-block-start: 1px solid var(--content-color);
+    border-inline-end: 1px solid var(--content-color);
+  }
 
+  .header::after {
+    border-block-end: 1px solid var(--content-color);
+    border-inline-start: 1px solid var(--content-color);
+  }
 
+  .decoration::before {
+    visibility: hidden;
+  }
 
+  .decoration::after {
+    visibility: hidden;
+  }
 
+  .header__theme-menu-list {
+    color: var(--content-color);
+  }
 
+  .header__theme-menu-button:hover {
+    outline: 1px solid rgba(50, 49, 45, 1);
+  }
 
-  
+  .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid var(--content-color);
+  }
+
+  .header-description {
+    color: var(--content-color);
+  }
+
+  .link {
+    text-shadow: 2px 2px 0 var(--accent-color);
+  }
+
+  .content-section__header {
+    color: var(--content-color);
+  }
+  .content-section__subheader {
+    color: var(--content-color);
+  }
+
+  .content-section__tip {
+    color: var(--content-color);
+  }
+
+  .footer::after {
+    border-block-start: 1px solid var(--content-color);
+    border-inline-end: 1px solid var(--content-color);
+  }
+
+  .footer::before {
+    border-block-end: 1px solid var(--content-color);
+    border-inline-start: 1px solid var(--content-color);
+  }
+}
+
+.page.theme_light {
+  --content-color: #353430;
+  --accent-color: #ff8dcb;
+  --background-color: #f5f5f5;
+  --main-header-color: #ffc2e6;
+  --background-image: url("/images/cover-image-light.png");
+
+  .header::before {
+    border-block-start: 1px solid var(--content-color);
+    border-inline-end: 1px solid var(--content-color);
+  }
+
+  .header::after {
+    border-block-end: 1px solid var(--content-color);
+    border-inline-start: 1px solid var(--content-color);
+  }
+
+  .decoration::before {
+    visibility: hidden;
+  }
+
+  .decoration::after {
+    visibility: hidden;
+  }
+
+  .header__theme-menu-list {
+    color: var(--content-color);
+  }
+
+  .header__theme-menu-button:hover {
+    outline: 1px solid rgba(50, 49, 45, 1);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid var(--content-color);
+  }
+
+  .header-description {
+    color: var(--content-color);
+  }
+
+  .link {
+    text-shadow: 2px 2px 0 var(--accent-color);
+  }
+
+  .content-section__header {
+    color: var(--content-color);
+  }
+
+  .content-section__subheader {
+    color: var(--content-color);
+  }
+
+  .content-section__tip {
+    color: var(--content-color);
+  }
+
+  .footer::after {
+    border-block-start: 1px solid var(--content-color);
+    border-inline-end: 1px solid var(--content-color);
+  }
+
+  .footer::before {
+    border-block-end: 1px solid var(--content-color);
+    border-inline-start: 1px solid var(--content-color);
+  }
+}

@@ -31,7 +31,7 @@
   position: absolute;
 }
 
-.header:after {
+.header::after {
   content: " ";
   inline-size: 25px;
   block-size: 25px;
@@ -77,6 +77,7 @@
   padding-inline-end: 10px;
   justify-self: end;
 }
+
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
@@ -131,7 +132,7 @@
   margin: 0px 10px 66px 10px;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--header-color);
+  color: var(--background-color);
   block-size: fit-content;
   inline-size: fit-content;
 }
@@ -167,7 +168,7 @@
 .content-section__subheader {
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--header-color);
+  color: var(--background-color);
 }
 
 .content-section__subheader-tips {
@@ -222,6 +223,7 @@
   inline-size: 100%;
   object-fit: contain;
 }
+
 .footer {
   position: relative;
   background-color: var(--background-color);

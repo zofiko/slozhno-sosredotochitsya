@@ -8,6 +8,5 @@
   --background-color: #000028;
   --main-header-color: #db00ff;
   --background-image: url("/images/cover-image-dark.png");
-  background-image: var(--background-image);
 }
 
