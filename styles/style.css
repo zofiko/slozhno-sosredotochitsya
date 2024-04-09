@@ -17,7 +17,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  block-size: 100vh;
+  min-block-size: 100vh;
 }
 
 .header::before {
@@ -57,6 +57,7 @@
   visibility: visible;
   z-index: 1;
 }
+
 .decoration::after {
   display: flex;
   content: "";
@@ -227,7 +228,9 @@
 .footer {
   position: relative;
   background-color: var(--background-color);
+  min-block-size: 100vh;
 }
+
 .footer-content {
   text-shadow: 2px 2px 0 var(--accent-color);
   padding: 286px 0px;
@@ -267,6 +270,7 @@
     padding-inline-end: 20px;
     gap: 80px;
   }
+
   .header::before {
     inset-block-start: 20px;
     inset-inline-end: 20px;
@@ -281,16 +285,19 @@
     inset-block-start: 20px;
     inset-inline-end: 48px;
   }
+
   .decoration::after {
     inset-block-start: 28px;
     inset-inline-end: 29px;
   }
+
   .header__theme-menu-list {
     padding-inline-end: 10px;
     padding-block-start: 115px;
     align-self: center;
     justify-self: center;
   }
+
   .main-title {
     padding: 0px;
     padding-block-start: 173px;
@@ -340,11 +347,13 @@
     display: block;
     max-inline-size: 236px;
   }
+
   .gallery {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
+
   .image {
     object-fit: cover;
     inline-size: 100%;
@@ -362,6 +371,7 @@
       "image-three image-four image-two"
       "image-three image-five image-five";
   }
+
   .image-one {
     grid-area: image-one;
   }
@@ -377,6 +387,7 @@
   .image-four {
     grid-area: image-four;
   }
+
   .image-five {
     grid-area: image-five;
   }
@@ -402,6 +413,7 @@
     padding-inline-end: 20px;
     gap: 80px;
   }
+
   .header::before {
     inset-block-start: 20px;
     inset-inline-end: 20px;
@@ -416,6 +428,7 @@
     inset-block-start: 20px;
     inset-inline-end: 48px;
   }
+
   .decoration::after {
     inset-block-start: 28px;
     inset-inline-end: 29px;
@@ -469,11 +482,13 @@
     display: block;
     max-inline-size: 315px;
   }
+
   .gallery {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
+
   .image {
     object-fit: cover;
     inline-size: 100%;
@@ -491,6 +506,7 @@
       "image-three image-four image-two"
       "image-three image-five image-five";
   }
+
   .image-one {
     grid-area: image-one;
   }
@@ -506,6 +522,7 @@
   .image-four {
     grid-area: image-four;
   }
+
   .image-five {
     grid-area: image-five;
   }
