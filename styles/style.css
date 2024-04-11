@@ -2,7 +2,8 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: var(--main-font);
+  background-color: var(--background-color);
   background-image: var(--background-image);
   background-position: center;
   background-attachment: fixed;
@@ -12,31 +13,27 @@
 .header {
   display: grid;
   grid-template-rows: repeat(3, auto);
-  background-color: var(--background-color);
-  background-image: var(--background-image);
-  background-size: cover;
-  background-position: center;
   position: relative;
   min-block-size: 100vh;
 }
 
-.header::before {
+.decorated-zone::after {
   content: "";
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--decor-color);
+  border-inline-end: 1px solid var(--decor-color);
   inset-block-start: 8px;
   inset-inline-end: 10px;
   position: absolute;
 }
 
-.header::after {
+.decorated-zone::before {
   content: " ";
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--decor-color);
+  border-inline-start: 1px solid var(--decor-color);
   position: absolute;
   inset-block-end: 8px;
   inset-inline-start: 10px;
@@ -49,7 +46,7 @@
 
 .decoration::before {
   content: "REC";
-  color: var(--accent-color);
+  color: var(--decor-color);
   position: absolute;
   inset-block-start: 10px;
   inset-inline-end: 43px;
@@ -64,7 +61,7 @@
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
-  background-color: var(--accent-color);
+  background-color: var(--decor-color);
   position: absolute;
   box-shadow: var(--accent-color) 0px 0px 10px 5px;
   inset-block-start: 18px;
@@ -74,7 +71,7 @@
 }
 
 .header__theme-menu {
-  padding-block-start: 72px;
+  padding-block-start: 75px;
   padding-inline-end: 10px;
   justify-self: end;
 }
@@ -83,7 +80,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: var(--accent-color);
+  color: var(--decor-color);
 }
 
 .header__theme-menu-item {
@@ -103,10 +100,11 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.4);
+  outline: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button_active {
+  outline: 1px solid var(--hover-color);
   pointer-events: none;
 }
 
@@ -115,15 +113,15 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--decor-color);
 }
 
 .main-title {
-  color: var(--main-header-color);
+  color: var(--title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
-  text-shadow: 4px 4px 0 var(--accent-color);
-  padding-block-start: 65px;
+  text-shadow: 4px 4px 0 var(--shadow-color);
+  padding-block-start: 60px;
   padding-block-end: 55px;
   padding-inline-start: 10px;
   font-family: inherit;
@@ -133,13 +131,13 @@
   margin: 0px 10px 66px 10px;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--background-color);
+  color: var(--header-color);
   block-size: fit-content;
   inline-size: fit-content;
 }
 
 .title-decor {
-  background-color: var(--accent-color);
+  background-color: var(--filling-color);
   font-weight: bold;
 }
 
@@ -163,13 +161,13 @@
 .content-section__header {
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--accent-color);
+  color: var(--decor-color);
 }
 
 .content-section__subheader {
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--background-color);
+  color: var(--header-color);
 }
 
 .content-section__subheader-tips {
@@ -185,7 +183,7 @@
 }
 
 .link {
-  text-shadow: 2px 2px 0 var(--content-color);
+  text-shadow: 2px 2px 0 var(--link-shadow-color);
   text-decoration: none;
 }
 
@@ -204,7 +202,7 @@
 .content-section__tip {
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--background-color);
+  color: var(--header-color);
   font-weight: normal;
 }
 
@@ -226,40 +224,20 @@
 }
 
 .footer {
-  position: relative;
   background-color: var(--background-color);
+  display: grid;
+  position: relative;
   min-block-size: 100vh;
 }
 
 .footer-content {
-  text-shadow: 2px 2px 0 var(--accent-color);
-  padding: 286px 0px;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--shadow-color);
   font-weight: bold;
   line-height: 0.825em;
   font-size: 116px;
-  text-align: center;
-}
-
-.footer::after {
-  position: absolute;
-  content: "";
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
-  inset-inline-end: 10px;
-  inset-block-start: 10px;
-}
-
-.footer::before {
-  position: absolute;
-  content: "";
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
-  inset-inline-start: 10px;
-  inset-block-end: 10px;
+  justify-self: center;
+  align-self: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -271,14 +249,14 @@
     gap: 80px;
   }
 
-  .header::before {
-    inset-block-start: 20px;
-    inset-inline-end: 20px;
-  }
-
-  .header:after {
+  .decorated-zone::before {
     inset-block-end: 20px;
     inset-inline-start: 20px;
+  }
+
+  .decorated-zone:after {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
   }
 
   .decoration::before {
@@ -300,7 +278,7 @@
 
   .main-title {
     padding: 0px;
-    padding-block-start: 173px;
+    padding-block-start: 176px;
   }
 
   .header-description {
@@ -391,20 +369,6 @@
   .image-five {
     grid-area: image-five;
   }
-
-  .footer-content {
-    padding: 462px 0px;
-  }
-
-  .footer::after {
-    inset-inline-end: 20px;
-    inset-block-start: 20px;
-  }
-
-  .footer::before {
-    inset-inline-start: 20px;
-    inset-block-end: 16px;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -412,16 +376,6 @@
     padding-inline-start: 20px;
     padding-inline-end: 20px;
     gap: 80px;
-  }
-
-  .header::before {
-    inset-block-start: 20px;
-    inset-inline-end: 20px;
-  }
-
-  .header:after {
-    inset-block-end: 20px;
-    inset-inline-start: 20px;
   }
 
   .decoration::before {
@@ -465,79 +419,14 @@
     justify-content: start;
   }
 
-  .flex-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
   .flex-wrapper__big-screen {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: flex-start;
   }
 
   .different-align {
     display: block;
     max-inline-size: 315px;
-  }
-
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .image {
-    object-fit: cover;
-    inline-size: 100%;
-    block-size: 100%;
-  }
-
-  .images {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: repeat(3, auto);
-    row-gap: 20px;
-    column-gap: 20px;
-    grid-template-areas:
-      "image-one image-one    image-two"
-      "image-three image-four image-two"
-      "image-three image-five image-five";
-  }
-
-  .image-one {
-    grid-area: image-one;
-  }
-
-  .image-two {
-    grid-area: image-two;
-  }
-
-  .image-three {
-    grid-area: image-three;
-  }
-
-  .image-four {
-    grid-area: image-four;
-  }
-
-  .image-five {
-    grid-area: image-five;
-  }
-
-  .footer-content {
-    padding: 319px 0px;
-  }
-
-  .footer::after {
-    inset-inline-end: 20px;
-    inset-block-start: 20px;
-  }
-
-  .footer::before {
-    inset-inline-start: 20px;
-    inset-block-end: 16px;
   }
 }
