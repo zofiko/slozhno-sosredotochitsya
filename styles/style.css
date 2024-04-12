@@ -23,7 +23,7 @@
   block-size: 25px;
   border-block-start: 1px solid var(--decor-color);
   border-inline-end: 1px solid var(--decor-color);
-  inset-block-start: 8px;
+  inset-block-start: 10px;
   inset-inline-end: 10px;
   position: absolute;
 }
@@ -35,7 +35,7 @@
   border-block-end: 1px solid var(--decor-color);
   border-inline-start: 1px solid var(--decor-color);
   position: absolute;
-  inset-block-end: 8px;
+  inset-block-end: 10px;
   inset-inline-start: 10px;
 }
 
@@ -49,7 +49,7 @@
   color: var(--decor-color);
   position: absolute;
   inset-block-start: 10px;
-  inset-inline-end: 43px;
+  inset-inline-end: 40px;
   line-height: 25px;
   visibility: visible;
   z-index: 1;
@@ -104,7 +104,7 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--hover-color);
+  outline: 1px solid var(--decor-color);
   pointer-events: none;
 }
 
@@ -121,7 +121,7 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--shadow-color);
-  padding-block-start: 60px;
+  padding-block-start: 65px;
   padding-block-end: 55px;
   padding-inline-start: 10px;
   font-family: inherit;
@@ -142,7 +142,6 @@
 }
 
 .main-content {
-  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -224,7 +223,6 @@
 }
 
 .footer {
-  background-color: var(--background-color);
   display: grid;
   position: relative;
   min-block-size: 100vh;
@@ -261,7 +259,7 @@
 
   .decoration::before {
     inset-block-start: 20px;
-    inset-inline-end: 48px;
+    inset-inline-end: 50px;
   }
 
   .decoration::after {
@@ -372,7 +370,13 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .header {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
   .main-content {
+    padding-block-start: 60px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
     gap: 80px;
@@ -380,7 +384,7 @@
 
   .decoration::before {
     inset-block-start: 20px;
-    inset-inline-end: 48px;
+    inset-inline-end: 50px;
   }
 
   .decoration::after {
@@ -403,11 +407,15 @@
 
   .main-title {
     font-size: 157px;
-    padding-block-start: 256px;
+    padding: 0;
+    padding-block-start: 65px;
   }
 
   .header-description {
-    margin: 114px 20px 134px 513px;
+    margin: 0;
+    margin-inline-end: 20px;
+    margin-inline-start: 513px;
+    margin-block-start: 51px;
     block-size: fit-content;
     inline-size: fit-content;
   }
@@ -428,5 +436,9 @@
   .different-align {
     display: block;
     max-inline-size: 315px;
+  }
+
+  .footer-content {
+    font-size: 157px;
   }
 }

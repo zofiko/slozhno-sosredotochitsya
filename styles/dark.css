@@ -4,6 +4,28 @@
   переключая тему
 */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --decor-color: #ff0070;
+    --filling-color: #ff0070;
+    --header-color: #000028;
+    --content-color: #f1b2ce;
+    --background-color: #000028;
+    --title-color: #db00ff;
+    --shadow-color: #ff0070;
+    --hover-color: rgba(255, 0, 112, 0.4);
+    --background-image: url("/images/cover-image-dark.png");
+    --link-shadow-color: #ff0070;
+  }
+  .main-content {
+    background-color: var(--background-color);
+  }
+
+  .footer {
+    background-color: var(--background-color);
+  }
+}
+
 .page.theme_dark {
   --decor-color: #ff0070;
   --filling-color: #ff0070;
@@ -22,6 +44,14 @@
 
   .decoration::after {
     visibility: visible;
+  }
+
+  .main-content {
+    background-color: var(--background-color);
+  }
+
+  .footer {
+    background-color: var(--background-color);
   }
 }
 
